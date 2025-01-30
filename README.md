@@ -1,7 +1,7 @@
 ## **Flight Booking System**
 
 ### **📌 Description**
-The **Flight Booking System** is a command-line application that allows users to **book** and **cancel seats** on a plane with **20 rows (A-T) and 8 seats per row**.
+The **Flight Booking System** is a command-line application that allows users to **book** and **cancel seats** on a plane. At this moment the default supporting capacity is **20 rows (A-T) and 8 seats per row**.
 
 Users can execute booking and cancellation operations using command-line arguments in the following format:
 
@@ -31,8 +31,19 @@ Users can execute booking and cancellation operations using command-line argumen
 ---
 
 ## **🚀 Running the JAR File**
-### **1️⃣ Build the JAR File**
-If you haven't already built the JAR file, use Maven:
+
+### **Run the JAR with Booking or Cancellation Commands**
+To run the JAR, use the following syntax:
+```sh
+java -jar flight-booking-1.0.001.jar BOOK D4 3
+```
+or
+```sh
+java -jar flight-booking-1.0.001.jar CANCEL C5 2
+```
+
+### **(Optional) Build the JAR File and replace the existing**
+If you would like to refresh the JAR file, use Maven:
 ```sh
 mvn clean package
 ```
@@ -40,30 +51,24 @@ The compiled JAR will be located in:
 ```
 target/flight-booking-1.0-SNAPSHOT.jar
 ```
-
-### **2️⃣ Run the JAR with Booking or Cancellation Commands**
-To run the JAR, use the following syntax:
-```sh
-java -jar target/flight-booking-1.0.001.jar BOOK D4 3
+Copy the file from the target to the root of the project, replacing the existing .jar file
 ```
-or
-```sh
-java -jar target/flight-booking-1.0.001.jar CANCEL C5 2
+cp target/flight-booking-1.0-SNAPSHOT.jar flight-booking-1.0-SNAPSHOT.jar
 ```
 
 ---
 
 ## **📝 Logging & Data Storage**
 - **All seat bookings are stored in:** `booking_the_flight.csv`.
-- **Log messages (errors, warnings, info) are stored in:** `logs/app.log`.
+- **Log messages (errors, warnings) are stored in:** `logs/app.log`.
 - Logs include details on **failed operations** for debugging purposes.
 
 ---
 
 ## **✅ Example Usage**
-### **Book 3 seats in row D starting from seat 4**
+### **Book 3 seats in row D starting from seat 0**
 ```sh
-java -jar target/flight-booking-1.0.001.jar BOOK D4 3
+java -jar target/flight-booking-1.0.001.jar BOOK D0 3
 ```
 ✅ **Expected Output:**
 ```
