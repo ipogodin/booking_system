@@ -1,0 +1,15 @@
+<configuration>
+    <property name="LOG_PATH" value="./logs/app.log" />
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}</file>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} [%level] %logger{10} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
