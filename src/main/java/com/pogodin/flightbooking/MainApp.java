@@ -22,7 +22,7 @@ public class MainApp {
         System.out.println(result.isSuccess() ? "SUCCESS" : "FAIL");
     }
 
-    private static OperationResult processLine(String[] commandLineRequest, int rowNumber, int seatNumber, String safeFileName){
+    static OperationResult processLine(String[] commandLineRequest, int rowNumber, int seatNumber, String safeFileName){
         BookingProcessor bp = new BookingProcessor(safeFileName, rowNumber, seatNumber);
         try {
             BookingRequest bookingRequest = bp.terminalToBookingRequest(commandLineRequest);
