@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pogodin.flightbooking</groupId>
-    <artifactId>JPBooking</artifactId>
+    <artifactId>flight-booking</artifactId>
     <version>1.0.001</version>
 
     <properties>
